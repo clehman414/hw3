@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'entries/new'
-  get 'entries/create'
-
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # get("/", { :controller => "articles", :action => "index" })
@@ -10,6 +7,6 @@ Rails.application.routes.draw do
   get("/places/:id", {:controller => "places", :action => "show"})
   post("/places", {:controller => "places", :action => "create"})
 
-  get("places/:place_id/entries/new", {:controller => "entries", :action => "new"})
+  get("/places/:place_id/entries/new", {:controller => "entries", :action => "new"})
   post("/places/:place_id/entries", {:controller => "entries", :action => "create"})
 end
