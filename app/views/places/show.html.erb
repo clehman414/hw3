@@ -1,2 +1,14 @@
-<h1>Places#show</h1>
-<p>Find me in app/views/places/show.html.erb</p>
+<h1><%= @place.name %></h1>
+
+<h2>Journal Entries</h2>
+<ul>
+  <% for entry in @entries %>
+    <li>
+      <a href="/places/id/<%= entry["id"] %>"><%= entry["title"] %></a>
+      <%= entry.description %>
+    </li>
+  <% end %>
+</ul>
+
+<p><a href="/places/place_id/entries/new">Create a new entry</a></p>
+<p><a href="/">Back to places</a></p>
