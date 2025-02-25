@@ -5,8 +5,8 @@
 <ul>
   <% for entry in @entries %>
     <li>
-      <a href="/places/id/<%= entry["id"] %>"><%= entry["title"] %></a>
-      <%= entry.description %>
+      <a href="/places/id<%= entry["id"] %>"><%= entry["title"] %></a>
+      <a href="/places/id<%= entry["id"] %>"><%= entry["description"] %></a>
     </li>
   <% end %>
 </ul>
